@@ -16,7 +16,7 @@
 	<BoxScore game={game.basicGameData}/>
 	<table>
 		<thead><td colspan=8 class="center white"><b>{game.basicGameData.vTeam.triCode}</b></td></thead>
-		<thead>
+		<thead class="small">
 			<td class="left">Name</td>
 			<td>Pos</td>
 			<td>Reb</td>
@@ -29,7 +29,7 @@
 		{#each game.stats.activePlayers.filter(a => a.teamId == game.basicGameData.vTeam.teamId) as p}
 			<tr>
 				<td class="left"><a href='/#/player/{p.personId}'>{p.firstName} {p.lastName}</a></td>
-				<td class="left">{p.pos}</td>
+				<td class="left small">{p.pos}</td>
 				<td>{p.totReb}</td>
 				<td>{p.assists}</td>
 				<td>{p.turnovers}</td>
@@ -40,7 +40,7 @@
 		{/each}
 		<tr><td colspan=8 class="white">&nbsp</td></tr>
 		<thead><td colspan=8 class="center"><b>{game.basicGameData.hTeam.triCode}</b></td></thead>
-		<thead>
+		<thead class="small">
 			<td class="left">Name</td>
 			<td>Pos</td>
 			<td>Reb</td>
@@ -53,7 +53,7 @@
 		{#each game.stats.activePlayers.filter(a => a.teamId == game.basicGameData.hTeam.teamId) as p}
 			<tr>
 				<td class="left"><a href='/#/player/{p.personId}'>{p.firstName} {p.lastName}</a></td>
-				<td class="left">{p.pos}</td>
+				<td class="left small">{p.pos}</td>
 				<td>{p.totReb}</td>
 				<td>{p.assists}</td>
 				<td>{p.turnovers}</td>
@@ -68,7 +68,5 @@
 {/if}
 
 <style>
-	.white {
-		background-color: white;
-	}
+
 </style>

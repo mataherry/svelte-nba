@@ -69,10 +69,6 @@
 		min-width: 30px;
 	}
 	
-	.left {
-		min-width: 80px;
-	}
-	
 	.score {
 		min-width: 40px;
 	}
